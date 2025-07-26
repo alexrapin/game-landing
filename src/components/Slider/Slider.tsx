@@ -6,23 +6,22 @@ const cards = [
     id: 1,
     title: 'Agent-Agent and Human-Agent Collaboration',
     text: 'Foster dynamic interactions to tackle complex challenges collectively.',
-    image: '/images/slider/slider1.svg',
+    image: './images/slider/slider1.svg',
   },
   {
     id: 2,
     title: 'Simulations and Economic Modeling',
     text: 'Simulate and refine systems in a risk-free environment.',
-    image: '/images/slider/slider2.svg',
+    image: './images/slider/slider2.svg',
   },
   {
     id: 3,
     title: 'Proof of Agent Autonomy',
     text: 'Validate agent parameters and memory immutability',
-    image: '/images/slider/slider3.svg',
+    image: './images/slider/slider3.svg',
   },
 ];
 
-// ...всі імпорти залишаються
 export const Slider: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
