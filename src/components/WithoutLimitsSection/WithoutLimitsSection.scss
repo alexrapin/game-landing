@@ -7,7 +7,7 @@
   padding-top: 15px;
 
   @include on-desktop {
-    background-image: url("./images/header-bg.jpg");
+    background-image: url('@/assets/header-bg.jpg');
     margin-block: 150px 140px;
     padding-block: 64px 128px;
     padding-inline: 50px;

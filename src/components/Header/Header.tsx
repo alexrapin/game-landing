@@ -1,17 +1,23 @@
 import type React from "react";
 import './Header.scss';
+import YouTubeIcon from '@/assets/logos/YouTube.svg';
+import InstagramIcon from '@/assets/logos/Instagram.svg';
+import FacebookIcon from '@/assets/logos/Facebook.svg';
+import XIcon from '@/assets/logos/X.svg';
+import TikTokIcon from '@/assets/logos/TikTok.svg';
+import ViberIcon from '@/assets/logos/Viber.svg';
+import DiscordIcon from '@/assets/logos/Discord.svg';
 
 export const Header: React.FC = () => {
   const socialIcons = [
-    { alt: 'YouTube', src: './images/logos/YouTube.svg', href: 'https://youtube.com' },
-    { alt: 'Instagram', src: './images/logos/Instagram.svg', href: 'https://instagram.com' },
-    { alt: 'Facebook', src: './images/logos/Facebook.svg', href: 'https://facebook.com' },
-    { alt: 'X', src: './images/logos/X.svg', href: 'https://x.com' },
-    { alt: 'TikTok', src: './images/logos/TikTok.svg', href: 'https://tiktok.com' },
-    { alt: 'Viber', src: './images/logos/Viber.svg', href: 'https://viber.com' },
-    { alt: 'Discord', src: './images/logos/Discord.svg', href: 'https://discord.com' }
+    { alt: 'YouTube', src: YouTubeIcon, href: 'https://youtube.com' },
+    { alt: 'Instagram', src: InstagramIcon, href: 'https://instagram.com' },
+    { alt: 'Facebook', src: FacebookIcon, href: 'https://facebook.com' },
+    { alt: 'X', src: XIcon, href: 'https://x.com' },
+    { alt: 'TikTok', src: TikTokIcon, href: 'https://tiktok.com' },
+    { alt: 'Viber', src: ViberIcon, href: 'https://viber.com' },
+    { alt: 'Discord', src: DiscordIcon, href: 'https://discord.com' }
   ];
-
 
   return (
     <header className="mainHeader" id="top">

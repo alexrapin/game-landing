@@ -1,22 +1,34 @@
+import MinecraftIcon from '@/assets/puzzle/minecraftIcon.svg';
+import MinecraftBg from '@/assets/puzzle/minecraftBg.png';
+
+import DungeonsIcon from '@/assets/puzzle/dungeonsIcon.svg';
+import DungeonsBg from '@/assets/puzzle/dungeonsBg.svg';
+
+import LegendsIcon from '@/assets/puzzle/legendsIcon.svg';
+import LegendsBg from '@/assets/puzzle/legendsBg.svg';
+
+import EducationIcon from '@/assets/puzzle/educationIcon.svg';
+import EducationBg from '@/assets/puzzle/educationBg.svg';
+
 export const puzzles = [
   {
     title: 'Minecraft',
-    icon: './images/puzzle/minecraftIcon.svg',
-    background: './images/puzzle/minecraftBg.png',
+    icon: MinecraftIcon,
+    background: MinecraftBg,
   },
   {
     title: 'Minecraft Dungeons',
-    icon: './images/puzzle/dungeonsIcon.svg',
-    background: './images/puzzle/dungeonsBg.svg',
+    icon: DungeonsIcon,
+    background: DungeonsBg,
   },
   {
     title: 'Minecraft Legends',
-    icon: './images/puzzle/legendsIcon.svg',
-    background: './images/puzzle/legendsBg.svg',
+    icon: LegendsIcon,
+    background: LegendsBg,
   },
   {
     title: 'Minecraft Education',
-    icon: './images/puzzle/educationIcon.svg',
-    background: './images/puzzle/educationBg.svg',
+    icon: EducationIcon,
+    background: EducationBg,
   },
 ];

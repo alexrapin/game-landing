@@ -1,6 +1,12 @@
 import type React from "react";
 import './AdvantagesSection.scss';
 
+import IceImage from '@/assets/advantages/ice.png';
+import PigImage from '@/assets/advantages/pig.png';
+import GastImage from '@/assets/advantages/gast.png';
+import MarketplaceImage from '@/assets/advantages/marketplace.png';
+
+
 export const AdvantagesSection: React.FC = () => {
   return (
     <section className="advantages">
@@ -8,7 +14,7 @@ export const AdvantagesSection: React.FC = () => {
         <div className="advantages__sectionImgWrapper">
           <img
             className="advantages__sectionImg"
-            src="./images/advantages/ice.png"
+            src={IceImage}
             alt="ice"
           />
         </div>
@@ -42,7 +48,7 @@ export const AdvantagesSection: React.FC = () => {
         <div className="advantages__sectionImgWrapper">
           <img
             className="advantages__sectionImg"
-            src="./images/advantages/pig.png"
+            src={PigImage}
             alt="pig"
           />
         </div>
@@ -70,7 +76,7 @@ export const AdvantagesSection: React.FC = () => {
         <div className="advantages__sectionImgWrapper">
           <img
             className="advantages__sectionImg"
-            src="./images/advantages/gast.png"
+            src={GastImage}
             alt="gast"
           />
         </div>
@@ -104,7 +110,7 @@ export const AdvantagesSection: React.FC = () => {
         <div className="advantages__sectionImgWrapper">
           <img
             className="advantages__sectionImg"
-            src="./images/advantages/marketplace.png"
+            src={MarketplaceImage}
             alt="marketplace"
           />
         </div>

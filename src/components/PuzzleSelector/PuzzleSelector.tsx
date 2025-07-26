@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./PuzzleSelector.scss";
 import { puzzles } from "./puzzleData";
+import PuzzleArrow from '@/assets/icons/puzzleArrow.svg';
 
 export const PuzzleSelector: React.FC = () => {
   const [activePuzzle, setActivePuzzle] = useState<number | null>(0);
@@ -12,7 +13,7 @@ export const PuzzleSelector: React.FC = () => {
   return (
     <div className="wrapper">
       <div className="videoLogo">
-        Watch <span style={{color: '#51FFD6'}}>Trailers</span>
+        Watch <span style={{ color: '#51FFD6' }}>Trailers</span>
       </div>
       <div
         className="background"
@@ -37,7 +38,7 @@ export const PuzzleSelector: React.FC = () => {
                 <span className="puzzle__title">{puzzle.title}</span>
                 <img
                   className={`puzzle__arrow ${activePuzzle === index ? "active" : ""}`}
-                  src="./images/icons/puzzleArrow.svg"
+                  src={PuzzleArrow}
                   alt="arrow"
                 />
               </div>

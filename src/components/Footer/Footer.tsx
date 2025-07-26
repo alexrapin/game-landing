@@ -2,6 +2,12 @@ import type React from "react";
 import './Footer.scss';
 import { LineWithCircles } from "../../shared/LineWithCircles";
 
+import ESRBImage from '@/assets/footer/esrb.png';
+import MojangImage from '@/assets/footer/mojang.png';
+import XboxImage from '@/assets/footer/xbox.png';
+import DiscordLogo from '@/assets/logos/Discord.svg';
+
+
 export const Footer: React.FC = () => {
   const links = ['Home', 'Core Features', 'Connect Hub',
     'Learn Hub', 'Faucet', 'Explorer', 'Ecosystem', 'Blog'];
@@ -13,19 +19,19 @@ export const Footer: React.FC = () => {
           <div className="footer__esrb">
             <img
               className="footer__image"
-              src="./images/footer/esrb.png"
+              src={ESRBImage}
               alt="Everyone10+"
             />
           </div>
           <div className="footer__mjxb">
             <img
               className="footer__imageGroup"
-              src="./images/footer/mojang.png"
+              src={MojangImage}
               alt="mojang"
             />
             <img
               className="footer__imageGroup"
-              src="./images/footer/xbox.png"
+              src={XboxImage}
               alt="xbox"
             />
           </div>
@@ -47,7 +53,7 @@ export const Footer: React.FC = () => {
             <div className="footer__connectWrapper"></div>
             <a className="footer__connectWrapper" href='#top'>
               <img
-                src="./images/logos/Discord.svg"
+                src={DiscordLogo}
                 alt="DiscordLogo"
                 className="footer__connectLogo"
               />

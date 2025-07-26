@@ -1,6 +1,7 @@
 import React from "react";
 import "./TheBestSection.scss";
 import { LineWithCircles } from "../../shared/LineWithCircles";
+import Background from '@/assets/theBest/Background.svg';
 
 export const TheBestSection: React.FC = () => {
   const titles = ['Framework', 'Lemniscap', 'Promotive', 'Smokey The Bera'];
@@ -18,7 +19,7 @@ export const TheBestSection: React.FC = () => {
             <h2 className="item__title">{title}</h2>
             <LineWithCircles />
             <img
-              src="./images/theBest/Background.svg"
+              src={Background}
               alt="minecraftLogo"
               className="item__image"
             />

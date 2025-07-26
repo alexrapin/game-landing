@@ -1,6 +1,7 @@
 import React from "react";
 import './WithoutLimitsSection.scss';
 import { LineWithCircles } from "../../shared/LineWithCircles";
+import starImage from '@/assets/icons/star.svg';
 
 export const WithoutLimitsSection: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ export const WithoutLimitsSection: React.FC = () => {
           <div className="withoutLimitsSection__contentImgWrapper">
             <img 
               className="withoutLimitsSection__contentImg"
-              src="./images/icons/star.svg" 
+              src={starImage} 
               alt="star" 
             />
           </div>

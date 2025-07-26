@@ -10,7 +10,8 @@
   background-image:
     linear-gradient(to bottom, #18191A, rgba(24, 25, 26, 0) 50%),
     linear-gradient(to top, #18191A, rgba(24, 25, 26, 0) 50%),
-    url('/images/header-bg.jpg');
+    url('@/assets/header-bg.jpg');
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

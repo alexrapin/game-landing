@@ -1,24 +1,29 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Slider.scss';
 
+import ArrowIcon from '@/assets/icons/arrow.svg';
+import Slider1 from '@/assets/slider/slider1.svg';
+import Slider2 from '@/assets/slider/slider2.svg';
+import Slider3 from '@/assets/slider/slider3.svg';
+
 const cards = [
   {
     id: 1,
     title: 'Agent-Agent and Human-Agent Collaboration',
     text: 'Foster dynamic interactions to tackle complex challenges collectively.',
-    image: './images/slider/slider1.svg',
+    image: Slider1,
   },
   {
     id: 2,
     title: 'Simulations and Economic Modeling',
     text: 'Simulate and refine systems in a risk-free environment.',
-    image: './images/slider/slider2.svg',
+    image: Slider2,
   },
   {
     id: 3,
     title: 'Proof of Agent Autonomy',
     text: 'Validate agent parameters and memory immutability',
-    image: './images/slider/slider3.svg',
+    image: Slider3,
   },
 ];
 
@@ -141,7 +146,7 @@ export const Slider: React.FC = () => {
         <button className="arrow left" onClick={prev}>
           <img
             className="arrow__image"
-            src="./images/icons/arrow.svg"
+            src={ArrowIcon}
             alt="arrowLeft"
           />
         </button>
@@ -152,7 +157,6 @@ export const Slider: React.FC = () => {
         onTouchStart={(e) => handleStart(e.touches[0].clientX)}
         onTouchMove={(e) => handleMove(e.touches[0].clientX)}
         onTouchEnd={handleEnd}
-        // 👇 Десктоп свайп працює тільки на мобільних
         onMouseDown={(e) => isMobile && handleStart(e.clientX)}
         onMouseMove={(e) => isMobile && handleMove(e.clientX)}
         onMouseUp={() => isMobile && handleEnd()}
@@ -185,7 +189,7 @@ export const Slider: React.FC = () => {
         <button className="arrow right" onClick={next}>
           <img
             className="arrow__image arrow__image--right"
-            src="./images/icons/arrow.svg"
+            src={ArrowIcon}
             alt="arrowRight"
           />
         </button>
