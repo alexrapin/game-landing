@@ -2,7 +2,7 @@
 
 🎮 **Live Demo:** [alexrapin.github.io/game-landing](https://alexrapin.github.io/game-landing/)
 
-A modern, responsive landing page for a browser-based puzzle game inspired by Minecraft. Built using **React**, **TypeScript**, **Sass**, and **Vite**.
+A modern, responsive landing page about Minecraft. Built using **React**, **TypeScript**, **Sass**, and **Vite**.
 
 ---
 
