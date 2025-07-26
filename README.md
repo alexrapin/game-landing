@@ -1,4 +1,4 @@
-# 🧩 Minecraft-style Game Landing Page
+# 🧩 Minecraft-style Landing Page
 
 🎮 **Live Demo:** [alexrapin.github.io/game-landing](https://alexrapin.github.io/game-landing/)
 
