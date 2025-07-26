@@ -33,5 +33,5 @@ export const WithoutLimitsSection: React.FC = () => {
         </div>
       </div>
     </section>
-  )
-} 
+  );
+};

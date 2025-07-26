@@ -16,4 +16,4 @@ export const Main: React.FC = () => {
       <TheBestSection />
     </main>
   );
-}
+};

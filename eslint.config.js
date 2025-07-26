@@ -1,41 +1,43 @@
 // eslint.config.js
-import js from '@eslint/js';
-import globals from 'globals';
-import tseslint from 'typescript-eslint';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import prettier from 'eslint-plugin-prettier';
-import { FlatCompat } from '@eslint/eslintrc';
+import js from '@eslint/js'
+import globals from 'globals'
+import tseslint from 'typescript-eslint'
+import react from 'eslint-plugin-react'
+import reactHooks from 'eslint-plugin-react-hooks'
+import importPlugin from 'eslint-plugin-import'
 
-const compat = new FlatCompat();
-
-export default [
-  ...compat.extends('plugin:prettier/recommended'),
-
+export default tseslint.config([
+  js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
-      ecmaVersion: 2020,
-      sourceType: 'module',
-      globals: globals.browser,
+      parser: tseslint.parser,
+      parserOptions: {
+        sourceType: 'module',
+        ecmaVersion: 2020,
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        ...globals.browser,
+        React: 'readonly',
+      },
     },
     plugins: {
       react,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-      prettier,
+      import: importPlugin,
     },
     rules: {
-      'prettier/prettier': 'error',
+      'no-unused-vars': 'error',
+      'no-console': 'warn',
+      'react/jsx-uses-react': 'off',
       'react/react-in-jsx-scope': 'off',
-      'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.ts', '.jsx'] }],
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
+      'indent': ['error', 2],
+      'semi': ['error', 'always'],
     },
   },
-
-  ...tseslint.config({
-    files: ['**/*.{ts,tsx}'],
-  }),
-];
+])
