@@ -27,20 +27,6 @@ A modern, responsive landing page for a browser-based puzzle game inspired by Mi
 
 ---
 
-## 📁 Folder Structure
-
-```
-src/
-├── assets/            # All images, icons, and media files
-├── components/        # Reusable UI blocks like Header, Footer, PuzzleSelector, etc.
-├── shared/            # Shared UI elements like LineWithCircles
-├── styles/            # Global SCSS, variables, and mixins
-├── App.tsx
-└── main.tsx
-```
-
----
-
 ## 🛠️ Setup & Development
 
 ```bash
@@ -59,38 +45,3 @@ App will be available at `http://localhost:5173`
 
 ---
 
-## 🧪 Build for Production
-
-```bash
-npm run build
-```
-
-Then deploy the contents of the `dist/` folder (e.g., to GitHub Pages).
-
----
-
-## 🌐 Deployment
-
-Deployed via GitHub Pages:  
-🔗 https://alexrapin.github.io/game-landing/
-
-To redeploy after changes:
-
-```bash
-npm run build
-# then push `dist/` using your deployment method
-```
-
-Or use [`vite-plugin-gh-pages`](https://www.npmjs.com/package/vite-plugin-gh-pages) for automation.
-
----
-
-## 📸 Screenshots
-
-> *(You can insert real screenshots later)*
-
----
-
-## 📄 License
-
-MIT © 2025 [Alex R.](https://github.com/alexrapin)
