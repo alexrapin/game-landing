@@ -1,0 +1,191 @@
+@use "./../../styles/utils/mixins" as *;
+@use "./../../styles/utils/vars" as *;
+
+.advantages {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  row-gap: 64px;
+  justify-content: center;
+  padding-inline: 32px;
+
+  background-color: #18191A;
+  color: white;
+  font-family: Inter;
+
+  @include on-desktop {
+    grid-template-columns: repeat(2, auto);
+    row-gap: 73px;
+    column-gap: 32px;
+    padding-inline: 64px;
+  }
+
+  @media (min-width: 900px) {
+    column-gap: 96px;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 330px;
+    max-width: 608px;
+    width: 100%;
+    margin-top: auto;
+  }
+
+  &__sectionImgWrapper {
+    position: relative;
+    min-width: 330px;
+    max-width: 608px;
+    width: 100%;
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 6px;
+      right: 0;
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, transparent 50%, #18191A 50%);
+      z-index: 2;
+      border-bottom-right-radius: 8px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 6px;
+      right: 0;
+      width: 81px;
+      height: 81px;
+      background: linear-gradient(135deg, transparent 49.5%, $grey-color 50%);
+      z-index: 1;
+      pointer-events: none;
+      border-bottom-right-radius: 8px;
+    }
+  }
+
+  &__sectionImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid $grey-color;
+    border-radius: 4px;
+  }
+
+  &__sectionHeader {
+    display: flex;
+    position: relative;
+    top: -30px;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 1200px) {
+      top: -45px;
+    }
+
+    &--header {
+      font-size: 33px;
+      line-height: 30px;
+
+      @media (min-width: 1200px) {
+        font-size: 59px;
+        line-height: 53px;
+      }
+    }
+
+    &--sub1,
+    &--sub2,
+    &--sub3,
+    &--sub4 {
+      position: relative;
+      display: inline-block;
+      background-color: $bg-color;
+      font-size: 17px;
+      line-height: 30px;
+      padding-top: 15px;
+      padding-inline: 10px;
+      border-radius: 4px;
+      z-index: 1;
+
+      @media (min-width: 1200px) {
+        font-size: 31px;
+        line-height: 53px;
+        padding-inline: 15px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 57%;
+        background-color: $bg-color;
+        z-index: -1;
+        border: 1px solid $grey-color;
+        border-bottom: none;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        box-sizing: border-box;
+
+        @media (min-width: 1200px) {
+          height: 61%;
+        }
+      }
+    }
+
+    &--sub1,
+    &--sub4 {
+      color: $blue-color;
+    }
+
+    &--sub2,
+    &--sub3 {
+      color: $turquoise-blue-color;
+    }
+  }
+
+  &__sectionFigure {
+    position: relative;
+    width: 104px;
+    margin-block: 12px 37px;
+  }
+
+  &__sectionLine {
+    position: absolute;
+    width: 104px;
+    height: 1px;
+    background-color: $turquoise-blue-color;
+
+    &--blue {
+      background-color: $blue-color;
+    }
+  }
+
+  &__sectionCircle {
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: $turquoise-blue-color;
+    top: -2.5px;
+
+    &--two {
+      right: 0;
+    }
+
+    &--blue {
+      background-color: $blue-color;
+    }
+  }
+
+  &__sectionText {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: $grey-color;
+    height: 120px;
+  }
+}

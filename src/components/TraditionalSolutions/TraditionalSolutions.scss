@@ -1,0 +1,206 @@
+@use "./../../styles/utils/mixins" as *;
+@use "./../../styles/utils/vars" as *;
+
+.traditionalSolutions {
+  &__titleBlock {
+    margin-inline: 32px;
+    margin-bottom: 40px;
+
+    @include on-desktop {
+      margin-bottom: 215px;
+    }
+
+    &--upper {
+      margin-bottom: 15px;
+
+      @include on-desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-family: Inter;
+    color: #DBE7E9;
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0.65px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include on-desktop {
+      font-size: 30px;
+      line-height: 98.4px;
+      letter-spacing: 2.46px;
+    }
+
+    @media (min-width: 1100px) {
+      font-size: 50px;
+    }
+  }
+
+  &__title {
+    color: white;
+    text-transform: uppercase;
+    font-family: Inter;
+    font-size: 19px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    text-align: center;
+
+    @include on-desktop {
+      font-size: 50px;
+      line-height: 72px;
+      letter-spacing: 1.8px;
+    }
+
+    @media (min-width: 1100px) {
+      font-size: 72px;
+    }
+  }
+
+  &__puzzleBlock {
+    margin-inline: 24px;
+    display: flex;
+    justify-content: center;
+
+    @include on-desktop {
+      position: relative;
+      margin-inline: 0;
+    }
+  }
+
+  &__infoBlockContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-inline: 32px;
+  }
+}
+
+.infoBlock {
+  font-family: Inter;
+  text-transform: uppercase;
+
+  background-image: url('/images/cave-bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom 0 center;
+  padding-bottom: 150px;
+  margin-block: 45px 30px;
+
+  @include on-desktop {
+    background-size: cover;
+    padding-bottom: 388px;
+    margin-block: 111px 0;
+  }
+
+  &__titleBlock {
+    display: flex;
+    gap: 30px;
+
+    @include on-desktop {
+      gap: 60px;
+    }
+  }
+
+  &__titleBlockOne {
+    color: $grey-color;
+    font-size: 40px;
+    line-height: 40px;
+
+    @include on-desktop {
+      font-size: 70px;
+      line-height: 80px;
+    }
+  }
+
+  &__titleBlockTwo {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 40px;
+    color: white;
+
+    @include on-desktop {
+      font-weight: 700;
+      font-style: Italic;
+      font-size: 70px;
+      line-height: 80px;
+    }
+  }
+
+  &__p {
+    font-size: 15px;
+    line-height: 45px;
+    letter-spacing: 0.75px;
+    color: $grey-color;
+    text-align: center;
+    width: 336px;
+
+    @include on-desktop {
+      font-size: 11px;
+      line-height: 34px;
+      letter-spacing: 0.52px;
+      width: 611px;
+    }
+
+    &--bigger {
+      font-size: 24px;
+      line-height: 45px;
+      letter-spacing: 0.75px;
+
+      @include on-desktop {
+        font-size: 11px;
+        line-height: 34px;
+        letter-spacing: 0.52px;
+      }
+    }
+
+    &--medium {
+      font-size: 20px;
+      line-height: 38px;
+      letter-spacing: 0.75px;
+
+      @include on-desktop {
+        font-size: 11px;
+        line-height: 34px;
+        letter-spacing: 0.52px;
+      }
+    }
+  }
+
+  &__smallTitle {
+    font-size: 11px;
+    line-height: 27.5px;
+    color: $grey-color;
+
+    @include on-desktop {
+      font-size: 20px;
+      line-height: 48.5px;
+    }
+  }
+
+  &__subTitle {
+    color: $grey-color;
+    font-size: 18px;
+    line-height: 27px;
+    opacity: 0.7;
+
+    @include on-desktop {
+      font-size: 32px;
+      line-height: 65px;
+      opacity: 1;
+    }
+  }
+
+  &__title2 {
+    display: none;
+
+    @include on-desktop {
+      display: inline;
+      font-size: 55px;
+      line-height: 68px;
+      color: $turquoise-blue-color;
+    }
+  }
+}

@@ -1,0 +1,223 @@
+@use "./../../styles/utils/mixins" as *;
+@use "./../../styles/utils/vars" as *;
+
+.footer {
+  font-family: Inter;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include on-desktop {
+      flex-direction: row;
+      border-top: 2px solid $turquoise-blue-color;
+      padding-block: 150px 44px;
+    }
+  }
+
+  &__logos {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    @include on-desktop {
+      order: 2;
+    }
+
+    @media (min-width: 1150px) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-inline: 50px;
+    }
+
+    @media (min-width: 1350px) {
+      margin-inline: 150px;
+    }
+  }
+
+  &__mjxb {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__image {
+    height: 160px;
+    width: auto;
+  }
+
+  &__imageGroup {
+    height: 100px;
+    width: auto;
+
+    @media (min-width: 1150px) {
+      height: 111px;
+    }
+  }
+
+  &__linkBlock {
+    @include on-desktop {
+      order: 1;
+    }
+  }
+
+  &__line {
+    width: 100%;
+    height: 2px;
+    background-color: $turquoise-blue-color;
+    margin-block: 89px 134px;
+
+    @include on-desktop {
+      display: none;
+    }
+  }
+
+  &__linkTitle {
+    padding-inline: 20px;
+    color: $grey-color;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    @include on-desktop {
+      padding-inline: 32px;
+    }
+  }
+
+  &__linkContainer {
+    padding: 8px 10px 0;
+    width: max-content;
+
+    @include on-desktop {
+      padding-inline: 16px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    list-style-type: none;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+
+    @include on-desktop {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      height: 2px;
+      width: 0%;
+      background-color: $turquoise-blue-color;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  &__connect {
+    margin-inline: 20px;
+
+    @include on-desktop {
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      margin-inline: 10px 32px;
+    }
+  }
+
+  &__connectTitle {
+    color: $grey-color;
+    font-size: 11px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+  }
+
+  &__connectLinks {
+    display: flex;
+    gap: 8px;
+    margin-block: 12px 32px;
+
+    @include on-desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__connectWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    background-color: #202123;
+
+    &:hover .footer__connectLogo {
+      transform: scale(1.2);
+    }
+  }
+
+  &__connectLogo {
+    width: 20px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  &__lineWrap {
+    padding-inline: 20px;
+
+    @include on-desktop {
+      padding-inline: 32px;
+    }
+  }
+
+  &__end {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    padding: 20px;
+
+    @include on-desktop {
+      padding: 20px 32px 62px;
+    }
+  }
+
+  &__endText {
+    font-size: 13px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $grey-color;
+  }
+
+  &__endList {
+    color: $grey-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+    padding-left: 16px;
+
+    font-size: 13px;
+    line-height: 24px;
+  }
+}

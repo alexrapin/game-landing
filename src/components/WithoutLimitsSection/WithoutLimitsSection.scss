@@ -1,0 +1,137 @@
+@use "./../../styles/utils/mixins" as *;
+@use "./../../styles/utils/vars" as *;
+
+.withoutLimitsSection {
+  background-color: $bg-color;
+  font-family: Inter;
+  padding-top: 15px;
+
+  @include on-desktop {
+    background-image: url("./images/header-bg.jpg");
+    margin-block: 150px 140px;
+    padding-block: 64px 128px;
+    padding-inline: 50px;
+  }
+
+  @media (min-width: 900px) {
+    padding-inline: 148px;
+  }
+
+  &__block {
+    background-color: $bg-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: 32px;
+    max-width: 1144px;
+
+    @include on-desktop {
+      padding: 16px;
+      min-width: 600px;
+      margin-inline: auto;
+    }
+  }
+
+  &__header {
+    padding-bottom: 64px;
+
+    @include on-desktop {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 32px 32px 64px;
+    }
+  }
+
+  &__headerP {
+    font-size: 8px;
+    line-height: 15px;
+    text-align: center;
+    color: #DBE7E9;
+
+    @include on-desktop {
+      font-size: 13px;
+      line-height: 24px;
+    }
+  }
+
+  &__headerSub {
+    color: white;
+    font-size: 17px;
+    line-height: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-block: 20px 10px;
+
+    @include on-desktop {
+      font-size: 38px;
+      line-height: 61px;
+    }
+  }
+
+  &__headerMain {
+    color: $turquoise-blue-color;
+    text-transform: uppercase;
+    font-size: 60px;
+    text-align: center;
+    line-height: 55px;
+
+    @include on-desktop {
+      font-size: 110px;
+      line-height: 100px;
+      text-align: left;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #41454E80;
+    border-radius: 8px;
+    margin-block: 16px 64px;
+    min-height: 224px;
+    width: 100%;
+
+    @include on-desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__contentImgWrapper {
+    @include on-desktop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 65%;
+      border-right: 1px solid $bg-color;
+    }
+  }
+
+  &__contentImg {
+    width: 37px;
+    height: 37px;
+    padding: 101px 24px 85px;
+    border-right: 1px solid $bg-color;
+
+    @include on-desktop {
+      width: 48px;
+      height: 48px;
+      border: none;
+      padding-block: auto;
+    }
+  }
+
+  &__contentP {
+    color: $grey-color;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 32px;
+
+    @include on-desktop {
+      width: 90%;
+    }
+  }
+}

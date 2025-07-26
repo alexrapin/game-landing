@@ -1,0 +1,204 @@
+@use "./../../styles/utils/mixins" as *;
+@use "./../../styles/utils/vars" as *;
+
+.puzzle {
+  &__list {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+
+    @include on-desktop {
+      gap: 1px;
+      position: absolute;
+      bottom: calc(50% - 228px);
+      right: 50%;
+    }
+
+    @media (min-width: 1150px) {
+      left: calc(50% - 456px);
+    }
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    margin-left: 24px;
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #171615;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 342px;
+    height: 108px;
+    box-shadow:
+      0 -4px 0 0 #000000 inset,
+      -4px 0 0 0 #262423 inset,
+      0 4px 0 0 #262423 inset;
+    transition-duration: 0.5s;
+    cursor: pointer;
+
+    &.active {
+      height: 312px;
+      background: #262423;
+      box-shadow:
+        0px 4px 0px 0px #6B6562 inset,
+        -4px 0px 0px 0px #6B6562 inset;
+    }
+
+    &:hover {
+      background-color: #262423;
+    }
+
+    @include on-desktop {
+      background-color: #262423;
+      height: 96px;
+      width: 456px;
+      box-shadow:
+        0px 0px 0px 0px #FFFFFF26 inset,
+        4px 0px 0px 0px #0000004D inset,
+        0px 0px 0px 0px #000000 inset,
+        0px 2px 0px 0px #FFFFFF33 inset;
+
+      &.active {
+        height: 95px;
+        background: #3D3938;
+        box-shadow:
+          0px 0px 0px 0px #FFFFFF26 inset,
+          4px 0px 0px 0px #0000004D inset,
+          0px -2px 0px 0px #000000 inset,
+          0px 4px 0px 0px #FFFFFF33 inset;
+      }
+
+      &:hover {
+        background: #3D3938;
+      }
+    }
+
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: calc(108px - 20px);
+
+    @include on-desktop {
+      height: 95px;
+      width: 456px;
+    }
+  }
+
+  &__title {
+    font-family: Noto Sans;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &__arrow {
+    position: absolute;
+    right: 13px;
+    top: auto;
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+
+    &.active {
+      transform: rotate(0);
+    }
+
+    @include on-desktop {
+      display: none;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 342px;
+
+    .details {
+      height: calc(100% - 4px);
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+
+      &.show {
+        max-height: 200px;
+      }
+    }
+  }
+
+  &__image {
+    width: 310px;
+    height: calc(100% - 4px);
+    object-fit: cover;
+    margin: 0 16px 16px;
+
+    @include on-desktop {
+      display: none;
+    }
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+
+  @include on-desktop {
+    height: 736px;
+    width: 100%;
+  }
+
+  .background {
+    width: auto;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease;
+    z-index: 0;
+    display: none;
+
+    @include on-desktop {
+      display: block;
+    }
+  }
+}
+
+.videoLogo {
+  position: absolute;
+  color: $grey-color;
+  font-family: Inter;
+  font-size: 39px;
+  line-height: 103px;
+  text-transform: uppercase;
+  display: none;
+  text-align: center;
+
+  @include on-desktop {
+    display: block;
+    width: 100%;
+    background-color: black;
+  }
+}
+
+.videoFrame {
+  position: absolute;
+  bottom: 0;
+  content: '';
+  height: 100px;
+  width: 100%;
+  background-color: black;
+  display: none;
+
+  @include on-desktop {
+    display: block;
+  }
+}
