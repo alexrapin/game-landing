@@ -95,7 +95,6 @@ export const Slider: React.FC = () => {
 
       let zIndex = 1;
       let opacity = 0;
-      let display = 'none';
 
       const isPrev = index === prevIndex;
       const isNext = index === nextIndex;
@@ -104,9 +103,7 @@ export const Slider: React.FC = () => {
       if (isActive) {
         zIndex = 3;
         opacity = 1;
-        display = 'block';
       } else if (isPrev || isNext) {
-        display = 'block';
         if (swipeDirection === 'right') {
           opacity = isPrev ? 0 : 1;
           zIndex = isPrev ? 2 : 1;
@@ -118,11 +115,11 @@ export const Slider: React.FC = () => {
         }
       }
 
-      const altDiff = diff > total / 2 ? diff - total : diff
+      const altDiff = diff > total / 2 ? diff - total : diff;
 
       return {
         transform: `translateX(calc(${altDiff * 100}% + ${altDiff * gap}px))`,
-        transition: 'transform 0.7s ease',
+        transition: 'transform 0.4s ease',
         opacity,
         zIndex,
       };
