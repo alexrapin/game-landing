@@ -95,19 +95,30 @@ export const Slider: React.FC = () => {
 
       let zIndex = 1;
       let opacity = 0;
+      let display = 'none';
 
-      if (index === activeIndex) {
+      const isPrev = index === prevIndex;
+      const isNext = index === nextIndex;
+      const isActive = index === activeIndex;
+
+      if (isActive) {
         zIndex = 3;
         opacity = 1;
-      } else if (index === prevIndex) {
-        zIndex = swipeDirection === 'right' ? 1 : 2;
-        opacity = 1;
-      } else if (index === nextIndex) {
-        zIndex = swipeDirection === 'right' ? 2 : 1;
-        opacity = 1;
+        display = 'block';
+      } else if (isPrev || isNext) {
+        display = 'block';
+        if (swipeDirection === 'right') {
+          opacity = isPrev ? 0 : 1;
+          zIndex = isPrev ? 2 : 1;
+        } else if (swipeDirection === 'left') {
+          opacity = isNext ? 0 : 1;
+          zIndex = isNext ? 2 : 1;
+        } else {
+          opacity = 1;
+        }
       }
 
-      const altDiff = diff > total / 2 ? diff - total : diff;
+      const altDiff = diff > total / 2 ? diff - total : diff
 
       return {
         transform: `translateX(calc(${altDiff * 100}% + ${altDiff * gap}px))`,

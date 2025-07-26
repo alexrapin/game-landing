@@ -54,6 +54,7 @@
   border-radius: 16px;
 
   @include on-phone {
+    width: 320px;
     overflow: hidden;
   }
 }
